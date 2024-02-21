@@ -1,0 +1,35 @@
+.div-item-container {
+     width: 90%;
+     margin: 10px;
+     display: flex;
+     justify-content: space-between;
+     border-bottom: 0.2px solid black;
+}
+
+.div-item-container-details {
+     margin: 10px;
+}
+
+.div-item-container-details b {
+     margin: 0 30px;
+}
+
+.div-item-container-buy-buttons {
+     display: flex;
+     align-items: center;
+}
+
+.div-item-container-buy-buttons button {
+     height: 30px;
+     margin: 0 5px;
+     background-color: forestgreen;
+     color: white;
+     border: 2px solid black;
+     border-radius: 5px;
+}
+
+.div-item-container-buy-buttons button:hover {
+     cursor: pointer;
+     background-color: white;
+     color: black;
+}

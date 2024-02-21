@@ -1,0 +1,17 @@
+.cart-button{
+     margin: 5px 10px 5px 5px;
+     border: 2px solid black;
+     width: 60px;
+     display: flex;
+     justify-content: space-between;
+     padding: 0px 5px 0px 5px;
+     background-color: forestgreen;
+     color: white;
+     border-radius: 5px;
+}
+
+.cart-button:hover{
+     cursor: pointer;
+     background-color: floralwhite;
+     color: black;
+}
