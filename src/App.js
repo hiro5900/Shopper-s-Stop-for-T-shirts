@@ -30,10 +30,14 @@ function App() {
       sizeS: 21
     }
   ])
+
+  const submitHandler = (item) => {
+    setItemsArray((prevState) => [...prevState, item])
+  }
   return (
     <>
       <Header />
-      <Form />
+      <Form items={itemsArray} onSubmit={submitHandler}/>
       <Main items={itemsArray}/>
     </>
   );
