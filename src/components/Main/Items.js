@@ -1,19 +1,20 @@
 import React from 'react'
 import './Items.css'
 
-const Items = () => {
+const Items = (props) => {
+     console.log(`This is from Items component`, props)
      return (
           <>
                <div className='div-item-container'>
                     <div className='div-item-container-details'>
-                         <h3>Navy Blue T-shirt</h3>
-                         <i>100% Cotton</i>
-                         <b>Price: $1200</b>
+                         <h3>{props.itemsDetails.tShirtName}</h3>
+                         <i>{props.itemsDetails.description}</i>
+                         <b>Price: {props.itemsDetails.price}</b>
                     </div>
                     <div className='div-item-container-buy-buttons'>
-                         <button>Buy L (12)</button>
-                         <button>Buy M (10)</button>
-                         <button>Buy S (20)</button>
+                         <button>Buy L ({props.itemsDetails.sizeL})</button>
+                         <button>Buy M ({props.itemsDetails.sizeM})</button>
+                         <button>Buy S ({props.itemsDetails.sizeS})</button>
                     </div>
                </div>
           </>
