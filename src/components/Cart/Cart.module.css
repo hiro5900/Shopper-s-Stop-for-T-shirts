@@ -1,0 +1,98 @@
+.cart-items {
+     list-style: none;
+     margin: 0;
+     padding: 0;
+     max-height: 20rem;
+     overflow: auto;
+}
+
+.total {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     font-weight: bold;
+     font-size: 1.5rem;
+     margin: 1rem 0;
+}
+
+.actions {
+     text-align: right;
+}
+
+.actions button {
+     font: inherit;
+     cursor: pointer;
+     background-color: transparent;
+     border: 2px solid black;
+     padding: 0.5rem 2rem;
+     border-radius: 5px;
+     margin-left: 1rem;
+}
+
+.actions button:hover,
+.actions button:active {
+     background-color: green;
+     border-color: black;
+     color: white;
+}
+
+.actions .button--alt {
+     color: black;
+}
+
+.actions .button {
+     background-color: white;
+     color: black;
+}
+
+.actions .button:hover {
+     background-color: green;
+     color: white;
+}
+
+.cartItemContainer {
+     /* background-color: red; */
+     display: flex;
+}
+
+/* .cartItemMeal { */
+     /* background-color: green; */
+/* } */
+
+.cartItemPrice {
+     color: #8a2b06;
+}
+
+.cartItemQty {
+     left: 160px;
+     position: absolute;
+     border: 1px solid gray;
+     border-radius: 5px;
+     font-family: monospace;
+     width: 40px;
+     height: 25px;
+     padding: 1px 0px 0 6px;
+}
+
+.cartItemButtons {
+     right: 30px;
+     position: absolute;
+     margin: 50px 0 0 0;
+}
+
+.cartItemButtons button {
+     width: 40px;
+     height: 30px;
+     margin: 4px;
+     border-radius: 5px;
+     border-color: #8a2b06;
+     border-width: 1px;
+     color: #5a1a01;
+     background-color: white;
+}
+
+.cartItemButtons button:hover{
+     background-color: #8a2b06;
+     color: white;
+     cursor: pointer;
+}

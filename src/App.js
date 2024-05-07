@@ -1,7 +1,8 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Main from './components/Main/Main';
 import Header from './components/Header/Header';
 import Form from './components/Form/Form';
+import Cart from './components/Cart/Cart';
 
 function App() {
   const [itemsArray, setItemsArray] = useState([
@@ -31,14 +32,25 @@ function App() {
     }
   ])
 
+  const [cartIsShown, setIsCartIsShown] = useState(false);
+
+  const showCartHandler = () => {
+    setIsCartIsShown(true);
+  };
+
+  const hideCartHandler = () => {
+    setIsCartIsShown(false);
+  };
+
   const submitHandler = (item) => {
     setItemsArray((prevState) => [...prevState, item])
   }
   return (
     <>
-      <Header />
-      <Form items={itemsArray} onSubmit={submitHandler}/>
-      <Main items={itemsArray}/>
+    {cartIsShown && <Cart onClose={hideCartHandler}/>}
+      <Header onShowCart={showCartHandler}/>
+      <Form items={itemsArray} onSubmit={submitHandler} />
+      <Main items={itemsArray} />
     </>
   );
 }
