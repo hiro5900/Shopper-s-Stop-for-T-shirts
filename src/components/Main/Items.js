@@ -27,7 +27,6 @@ const Items = (props) => {
               item.name === props.itemsDetails.tShirtName &&
               item.size === size
             ) {
-              console.log("increasing quantity");
               return {
                 ...item,
                 quantity: item.quantity + 1,
