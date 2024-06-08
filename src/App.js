@@ -46,7 +46,20 @@ function App() {
   };
 
   const submitHandler = (item) => {
-    setItemsArray((prevState) => [...prevState, item]);
+    setItemsArray((prev) => {
+      const _item = prev.find((i) => i.tShirtName === item.tShirtName);
+      if (_item) {
+        return [
+          ...prev.map((i) => {
+            if (i.tShirtName === item.tShirtName) {
+              return item;
+            }
+            return i;
+          }),
+        ];
+      }
+      return [...prev, item];
+    });
   };
   return (
     <>
@@ -57,7 +70,7 @@ function App() {
           setCartItems={setCartItems}
         />
       )}
-      <Header onShowCart={showCartHandler} />
+      <Header onShowCart={showCartHandler} items={cartItems.length} />
       <Form items={itemsArray} onSubmit={submitHandler} />
       <Main
         items={itemsArray}
