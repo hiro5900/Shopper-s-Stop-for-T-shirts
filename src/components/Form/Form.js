@@ -41,7 +41,7 @@ const Form = (props) => {
           let formItemsDetails = {
                tShirtName: tShirtName,
                description: description,
-               price: price,
+               price: `$${price}`,
                sizeL: sizeL,
                sizeM: sizeM,
                sizeS: sizeS

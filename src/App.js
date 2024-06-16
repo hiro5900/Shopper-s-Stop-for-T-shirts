@@ -47,8 +47,8 @@ function App() {
   }
   return (
     <>
-    {cartIsShown && <Cart onClose={hideCartHandler}/>}
-      <Header onShowCart={showCartHandler}/>
+      {cartIsShown && <Cart onClose={hideCartHandler} />}
+      <Header onShowCart={showCartHandler} />
       <Form items={itemsArray} onSubmit={submitHandler} />
       <Main items={itemsArray} />
     </>

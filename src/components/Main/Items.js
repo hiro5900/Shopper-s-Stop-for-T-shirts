@@ -1,8 +1,13 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import './Items.css'
 
 const Items = (props) => {
      console.log(`This is from Items component`, props)
+     const buyButtonHandler = (event) => {
+          console.log('Buy button clicked')
+          console.log(props.itemsDetails.sizeL)
+          props.itemsDetails.sizeL--
+     }
      return (
           <>
                <div className='div-item-container'>
@@ -12,7 +17,7 @@ const Items = (props) => {
                          <b>Price: {props.itemsDetails.price}</b>
                     </div>
                     <div className='div-item-container-buy-buttons'>
-                         <button>Buy L ({props.itemsDetails.sizeL})</button>
+                         <button onClick={buyButtonHandler}>Buy L ({props.itemsDetails.sizeL})</button>
                          <button>Buy M ({props.itemsDetails.sizeM})</button>
                          <button>Buy S ({props.itemsDetails.sizeS})</button>
                     </div>
