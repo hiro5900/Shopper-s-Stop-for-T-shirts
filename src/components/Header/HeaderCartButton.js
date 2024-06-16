@@ -1,12 +1,12 @@
-import React from 'react'
-import './HeaderCartButton.css'
+import React from "react";
+import "./HeaderCartButton.css";
 
 const HeaderCartButton = (props) => {
   return (
-    <div className='cart-button' onClick={props.onClick}>
-     <div>Cart 3</div>
+    <div className="cart-button" onClick={props.onClick}>
+      <div>Cart {props.items > 0 ? props.items : undefined}</div>
     </div>
-  )
-}
+  );
+};
 
-export default HeaderCartButton; 
+export default HeaderCartButton;
